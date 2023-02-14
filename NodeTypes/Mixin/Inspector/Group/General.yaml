@@ -1,0 +1,8 @@
+'Kleisli.Kubbar:Mixin.Inspector.Group.General':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        general:
+          label: 'General'
+          icon: edit

@@ -1,0 +1,20 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "kleisli/kubbar",
+    "require": {
+        "neos/neos": "*",
+        "neos/nodetypes-basemixins": "^8.0 || dev-master",
+        "sitegeist/kaleidoscope": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kleisli\\Kubbar\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Kleisli.Kubbar"
+        }
+    }
+}

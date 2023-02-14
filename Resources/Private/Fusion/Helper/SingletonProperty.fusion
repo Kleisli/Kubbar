@@ -1,0 +1,13 @@
+prototype(Kleisli.Kubbar:Helper.SingletonProperty) < prototype(Neos.Fusion:Component) {
+
+    mainNode = ${site}
+    property = ""
+    editAnywhere = false
+
+    renderer = Neos.Neos:Editable {
+        node = ${props.mainNode}
+        property = ${props.property}
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping
+        @process.contentElementWrapping.@if.isEditable = ${props.editAnywhere || node == props.mainNode}
+    }
+}

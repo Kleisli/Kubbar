@@ -1,0 +1,31 @@
+prototype(Kleisli.Kubbar:Component.Header) < prototype(Neos.Fusion:Component) {
+
+  logo = Kleisli.Kubbar:Component.Molecule.Logo
+  navigation = Kleisli.Kubbar:Component.Molecule.Menu {
+    align = 'middle'
+  }
+
+  # Template
+  renderer = afx`
+  <header>
+    <Kleisli.Kubbar:Helper.Visibility hideForSizeOrBigger="large">
+      <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+        {props.logo}
+
+        <div class="menu-button">
+          <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+        </div>
+      </div>
+    </Kleisli.Kubbar:Helper.Visibility>
+
+    <div class="top-bar" id="main-menu">
+      <Kleisli.Kubbar:Helper.Visibility showForSizeOrBigger="large">
+        {props.logo}
+      </Kleisli.Kubbar:Helper.Visibility>
+      <nav>
+        {props.navigation}
+      </nav>
+    </div>
+  </header>
+  `
+}

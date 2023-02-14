@@ -1,0 +1,14 @@
+##
+# "Image" element
+#
+prototype(Kleisli.Kubbar:Content.Image) < prototype(Neos.Neos:ContentComponent) {
+    image = ${q(node).property('image')}
+    hasCaption = ${q(node).property('hasCaption')}
+    caption = Neos.Neos:Editable {
+        property = 'caption'
+    }
+
+    renderer = afx`
+      <Kleisli.Kubbar:Component.Figure image.asset={props.image} withCaption={props.hasCaption} caption={props.caption} />
+    `
+}

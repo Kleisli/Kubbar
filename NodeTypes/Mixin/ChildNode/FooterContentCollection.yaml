@@ -1,0 +1,5 @@
+'Kleisli.Kubbar:Mixin.ChildNode.FooterContentCollection':
+  abstract: true
+  childNodes:
+    footer:
+      type: 'Neos.Neos:ContentCollection'

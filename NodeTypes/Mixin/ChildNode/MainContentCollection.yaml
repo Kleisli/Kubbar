@@ -1,0 +1,5 @@
+'Kleisli.Kubbar:Mixin.ChildNode.MainContentCollection':
+  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'

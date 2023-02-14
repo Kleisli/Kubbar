@@ -1,0 +1,4 @@
+'Kleisli.Kubbar:Mixin.FlexContainer':
+  abstract: true
+  superTypes:
+    'Neos.Neos:ContentCollection': true

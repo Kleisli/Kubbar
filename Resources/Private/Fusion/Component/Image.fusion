@@ -1,0 +1,50 @@
+prototype(Kleisli.Kubbar:Component.Image) < prototype(Neos.Fusion:Component) {
+
+    asset = null
+
+    package = false
+    path = null
+
+    uri = null
+
+    srcset = null
+    sizes = null
+    alt = null
+    title = null
+    loading = 'lazy'
+    width = null
+    height = null
+    format = null
+    attributes = Neos.Fusion:DataStructure
+    renderDimensionAttributes = true
+
+    renderer = Sitegeist.Kaleidoscope:Image {
+        @apply.props = ${props}
+        imageSource = Neos.Fusion:Case {
+            asset {
+                condition = ${props.asset}
+
+                renderer = Sitegeist.Kaleidoscope:AssetImageSource {
+                    asset = ${props.asset}
+                }
+            }
+            resource {
+                condition = ${props.path}
+                renderer = Sitegeist.Kaleidoscope:ResourceImageSource {
+                    path = ${props.path}
+                    package = ${props.package}
+                }
+            }
+            uri {
+                condition = ${props.uri}
+                renderer = Sitegeist.Kaleidoscope:UriImageSource {
+                    uri = ${props.uri}
+                }
+            }
+            dummy {
+                condition = true
+                renderer = Sitegeist.Kaleidoscope:DummyImageSource
+            }
+        }
+    }
+}

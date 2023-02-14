@@ -1,0 +1,9 @@
+'Kleisli.Kubbar:Mixin.Inspector.Group.Content':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        content:
+          label: Content
+          position: 1
+          icon: 'sticky-notes'

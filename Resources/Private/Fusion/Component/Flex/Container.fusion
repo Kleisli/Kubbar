@@ -1,0 +1,47 @@
+prototype(Kleisli.Kubbar:Component.Flex.Container) < prototype(Neos.Fusion:Component) {
+
+  htmlTag = 'div'
+  class = ''
+  content = ${value}
+  direction = 'horizontal'
+  reverse = false
+  wrap = Neos.Fusion:DataStructure {
+    enable = false
+    reverse = false
+  }
+  align = Neos.Fusion:DataStructure {
+    # justify-content
+    primary = 'flex-start'
+    # align-items
+    secondary = 'stretch'
+    # align-content
+    multilines = 'normal'
+  }
+  gap = Neos.Fusion:DataStructure {
+    row = false
+    column = false
+  }
+
+  renderer = Neos.Fusion:Tag {
+    tagName = ${props.htmlTag}
+    attributes.style = Neos.Fusion:Join {
+      flex = ${'display: flex;'}
+      direction = ${'flex-direction :' + (props.direction == 'vertical' ? 'column' : 'row') + (props.reverse ? '-reverse': '') + ';'}
+      wrap = ${'flex-wrap: ' + (props.wrap.enable ? ('wrap'+ props.wrap-reverse ? '-reverse':'' ) : 'nowrap') + ';'}
+      alignPrimary.@if.notDefault = ${props.align.primary != 'flex-start'}
+      alignPrimary = ${'justify-content:'+props.align.primary + ';'}
+      alignPrimary.@if.notDefault = ${props.align.primary != 'flex-start'}
+      alignSecondary = ${'align-items:'+props.align.secondary + ';'}
+      alignSecondary.@if.notDefault = ${props.align.secondary != 'stretch'}
+      alignMultilines = ${'align-content:'+props.align.multilines + ';'}
+      alignMultilines.@if.notDefault = ${props.align.multilines != 'normal'}
+      gapRow = ${'gap-row:'+props.gap.row + ';'}
+      gapRow.@if.isset = ${props.gap.row}
+      gapColumn = ${'gap-column:'+props.gap.column + ';'}
+      gapColumn.@if.isset = ${props.gap.column}
+    }
+    attributes.class = ${props.class ? ' '+props.class : ''}
+    content = ${props.content}
+
+  }
+}

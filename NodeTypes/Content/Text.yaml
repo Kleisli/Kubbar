@@ -1,0 +1,8 @@
+'Kleisli.Kubbar:Content.Text':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Kleisli.Kubbar:Mixin.Property.Text': true
+  ui:
+    label: 'Text'
+    icon: 'icon-file-text'
+    position: 200

@@ -1,0 +1,14 @@
+##
+# "Text" element
+#
+prototype(Kleisli.Kubbar:Content.Text) < prototype(Neos.Neos:ContentComponent) {
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+
+    renderer = afx`
+        <div class="component-text">
+            {props.text}
+        </div>
+    `
+}

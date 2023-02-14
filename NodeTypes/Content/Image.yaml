@@ -1,0 +1,8 @@
+'Kleisli.Kubbar:Content.Image':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Kleisli.Kubbar:Mixin.Property.Image': true
+  ui:
+    label: i18n
+    icon: 'icon-picture'
+    position: 300

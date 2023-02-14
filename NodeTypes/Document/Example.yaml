@@ -1,0 +1,8 @@
+'Kleisli.Kubbar:Document.Example':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+    'Kleisli.Kubbar:Mixin.ChildNode.MainContentCollection': true
+  ui:
+    icon: file
+    label: 'Page'

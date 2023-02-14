@@ -1,0 +1,22 @@
+prototype(Kleisli.Kubbar:Helper.SingletonContentCollection) < prototype(Neos.Fusion:Component) {
+
+    mainNode = ${site}
+    nodePath = ""
+    editAnywhere = false
+
+    renderer = Neos.Neos:ContentCollection {
+        @context.node = ${Neos.Node.nearestContentCollection(props.mainNode, props.nodePath)}
+        nodePath = ${props.nodePath}
+
+        attributes {
+            style = "pointer-events: none;"
+            style.@if.notEditable = ${!(documentNode == props.mainNode || props.editAnywhere)}
+        }
+
+        @cache {
+            entryIdentifier {
+                documentNode = ${documentNode}
+            }
+        }
+    }
+}

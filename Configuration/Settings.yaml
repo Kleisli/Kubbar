@@ -1,0 +1,10 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        Kleisli.Kubbar: true
+    userInterface:
+      translation:
+        autoInclude:
+          Kleisli.Kubbar:
+            - 'NodeTypes/*'

@@ -1,0 +1,16 @@
+'Kleisli.Kubbar:Content.Heading':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Kleisli.Kubbar:Mixin.Property.Heading': true
+  ui:
+    label: i18n
+    icon: 'icon-header'
+    position: 100
+  properties:
+    'title':
+      ui:
+        inline:
+          editorOptions:
+            formatting:
+              h4: true
+              h5: true

@@ -1,0 +1,17 @@
+prototype(Kleisli.Kubbar:Component.Figure) < prototype(Neos.Fusion:Component) {
+
+  class = false
+  image = Kleisli.Kubbar:Component.Image
+  withCaption = true
+  caption = ''
+
+  renderer = afx`
+    <figure class={props.class}>
+      {props.image}
+      <figcaption @if.showCaption={props.withCaption}>
+        {props.caption}
+      </figcaption>
+    </figure>
+  `
+}
+

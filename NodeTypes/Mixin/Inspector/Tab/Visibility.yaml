@@ -1,0 +1,15 @@
+'Kleisli.Kubbar:Mixin.Inspector.Tab.Visibility':
+  abstract: true
+  ui:
+    inspector:
+      tabs:
+        visibility:
+          label: 'Visibility'
+          position: 10
+          icon: 'icon-eye'
+      groups:
+        visibility:
+          label: 'Neos.Neos:Inspector:groups.visibility'
+          icon: 'icon-eye'
+          position: 100
+          tab: visibility

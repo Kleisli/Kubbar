@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="de" datatype="plaintext" original="" product-name="Kleisli.Kubbar">
+    <body>
+      <trans-unit id="groups.image" xml:space="preserve">
+        <source>Image</source>
+        <target state="final">Bild</target>
+      </trans-unit>
+      <trans-unit id="properties.image" xml:space="preserve">
+        <source>Image</source>
+        <target state="final">Bild</target>
+      </trans-unit>
+      <trans-unit id="properties.alternativeText" xml:space="preserve">
+        <source>Alternative Text</source>
+        <target state="final">Alternativ-Text</target>
+      </trans-unit>
+      <trans-unit id="properties.title" xml:space="preserve">
+        <source>Title</source>
+        <target state="final">Titel</target>
+      </trans-unit>
+      <trans-unit id="properties.hasCaption" xml:space="preserve">
+        <source>Has Caption</source>
+        <target state="final">Hat Bildbeschreibung</target>
+      </trans-unit>
+      <trans-unit id="properties.caption.ui.inline.editorOptions.placeholder" xml:space="preserve">
+        <source>Caption</source>
+        <target state="final">Bildbeschreibung</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

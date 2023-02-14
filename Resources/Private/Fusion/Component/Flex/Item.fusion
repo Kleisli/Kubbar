@@ -1,0 +1,32 @@
+prototype(Kleisli.Kubbar:Component.Flex.Item) < prototype(Neos.Fusion:Component) {
+
+  htmlTag = 'div'
+  class = ''
+  content = ${value}
+
+  order = 0
+
+  expand = false
+  shrink = false
+
+  align = Neos.Fusion:DataStructure {
+    # align-items
+    secondary = null
+  }
+
+  renderer = Neos.Fusion:Tag {
+    tagName = ${props.htmlTag}
+    attributes.style = Neos.Fusion:Join {
+      order = ${'order:'+props.order + ';'}
+      order.@if.notDefault = ${props.order != 0}
+
+      alignSecondary = ${'align-self:'+props.align.secondary + ';'}
+      alignSecondary.@if.isset = ${props.align.secondary}
+    }
+    attributes.class = ${props.class ? ' '+props.class : ''}
+    content = ${props.content}
+
+    # Add contentElementWrapping so it would be possible to edit row's properties
+    @process.contentElementWrapping = Neos.Neos:ContentElementWrapping
+  }
+}
