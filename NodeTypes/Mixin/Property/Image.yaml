@@ -1,12 +1,7 @@
 'Kleisli.Kubbar:Mixin.Property.Image':
   abstract: true
-  ui:
-    inspector:
-      groups:
-        image:
-          label: i18n
-          position: 5
-          icon: 'icon-image'
+  superTypes:
+    'Kleisli.Kubbar:Mixin.Inspector.Group.Image': true
   properties:
     image:
       type: Neos\Media\Domain\Model\ImageInterface

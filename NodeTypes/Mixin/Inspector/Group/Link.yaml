@@ -1,0 +1,9 @@
+'Kleisli.Kubbar:Mixin.Inspector.Group.Link':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        content:
+          label: Link
+          position: 2
+          icon: 'link'

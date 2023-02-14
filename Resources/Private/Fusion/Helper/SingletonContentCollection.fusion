@@ -10,7 +10,7 @@ prototype(Kleisli.Kubbar:Helper.SingletonContentCollection) < prototype(Neos.Fus
 
         attributes {
             style = "pointer-events: none;"
-            style.@if.notEditable = ${!(documentNode == props.mainNode || props.editAnywhere)}
+            style.@if.notEditable = ${node.context.inBackend && !(documentNode == props.mainNode || props.editAnywhere)}
         }
 
         @cache {

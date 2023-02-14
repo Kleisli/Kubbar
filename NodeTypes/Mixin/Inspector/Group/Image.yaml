@@ -1,0 +1,9 @@
+'Kleisli.Kubbar:Mixin.Inspector.Group.Image':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        image:
+          label: i18n
+          position: 5
+          icon: 'icon-image'
