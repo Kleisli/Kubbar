@@ -1,4 +1,5 @@
 'Kleisli.Kubbar:Content.Image':
+  abstract: true
   superTypes:
     'Neos.Neos:Content': true
     'Kleisli.Kubbar:Mixin.Property.Image': true

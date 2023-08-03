@@ -1,4 +1,5 @@
 'Kleisli.Kubbar:Content.Text':
+  abstract: true
   superTypes:
     'Neos.Neos:Content': true
     'Kleisli.Kubbar:Mixin.Property.Text': true
