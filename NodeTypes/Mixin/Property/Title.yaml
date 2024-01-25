@@ -1,0 +1,6 @@
+'Kleisli.Kubbar:Mixin.Property.Title':
+  abstract: true
+  properties:
+    title:
+      options:
+        preset: 'text.plain'

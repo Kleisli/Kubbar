@@ -1,5 +1,7 @@
 'Kleisli.Kubbar:Mixin.Property.Link':
   abstract: true
+  superTypes:
+    'Kleisli.Kubbar:Mixin.Inspector.Group.Link': true
   properties:
     link:
       type: string
@@ -8,4 +10,5 @@
         reloadIfChanged: true
         inspector:
           position: 300
+          group: link
           editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
