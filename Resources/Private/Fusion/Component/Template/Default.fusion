@@ -1,4 +1,4 @@
-prototype(Gewerbeverein.Site:Component.Template.Default) < prototype(Neos.Fusion:Component) {
+prototype(Kleisli.Kubbar:Component.Template.Default) < prototype(Neos.Fusion:Component) {
 
     content = ''
 
