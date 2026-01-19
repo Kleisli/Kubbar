@@ -4,10 +4,10 @@
     'Kleisli.Kubbar:Mixin.Inspector.Group.Image': true
   properties:
     image:
-      type: Neos\Media\Domain\Model\ImageInterface
+      options:
+        preset: 'image.single'
       ui:
         label: i18n
-        reloadIfChanged: true
         inspector:
           group: 'image'
           position: 50

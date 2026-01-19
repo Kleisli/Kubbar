@@ -1,4 +1,4 @@
-'Kleisli.Kubbar:Document.Example':
+'Kleisli.Kubbar:Document.Page':
   abstract: true
   superTypes:
     'Neos.Neos:Document': true
@@ -6,3 +6,6 @@
   ui:
     icon: file
     label: 'Page'
+  constraints:
+    nodeTypes:
+      'Kleisli.Kubbar:Document.RootPage': false

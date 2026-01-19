@@ -1,4 +1,4 @@
-prototype(Kleisli.Kubbar:Component.Footer) < prototype(Neos.Fusion:Component) {
+prototype(Kleisli.Kubbar:Component.Organism.Footer) < prototype(Neos.Fusion:Component) {
 
   footerContent = Kleisli.Kubbar:Helper.SingletonContentCollection {
     nodePath = 'footerContent'

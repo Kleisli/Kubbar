@@ -1,4 +1,4 @@
-prototype(Kleisli.Kubbar:Component.Figure) < prototype(Neos.Fusion:Component) {
+prototype(Kleisli.Kubbar:Component.Molecule.Figure) < prototype(Neos.Fusion:Component) {
 
   class = false
   image = Kleisli.Kubbar:Component.Image

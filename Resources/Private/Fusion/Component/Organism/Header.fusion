@@ -1,4 +1,4 @@
-prototype(Kleisli.Kubbar:Component.Header) < prototype(Neos.Fusion:Component) {
+prototype(Kleisli.Kubbar:Component.Organism.Header) < prototype(Neos.Fusion:Component) {
 
   logo = Kleisli.Kubbar:Component.Molecule.Logo
   navigation = Kleisli.Kubbar:Component.Molecule.Menu {

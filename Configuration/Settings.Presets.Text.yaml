@@ -4,6 +4,26 @@ Neos:
       presets:
         properties:
           text:
+
+            heading:
+              type: string
+              defaultValue: ''
+              ui:
+                inlineEditable: true
+                inline:
+                  editorOptions:
+                    placeholder: 'Heading'
+                    autoparagraph: false
+                    formatting:
+                      p: false
+                      h1: true
+                      h2: true
+                      h3: true
+                      h4: true
+                      h5: true
+                      removeFormat: true
+                      a: true
+
             plain:
               type: string
               defaultValue: ''
@@ -11,7 +31,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: '(( text plain ))'
+                    placeholder: 'Text'
                     autoparagraph: false
                     formatting: {'removeFormat': true}
 
@@ -22,7 +42,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: '(( text block ))'
+                    placeholder: 'Text'
                     autoparagraph: true
                     linking:
                       anchor: true
@@ -55,6 +75,7 @@ Neos:
                       ol: false
                       ul: false
                       a: true
+
             free:
               type: string
               defaultValue: ''
@@ -62,7 +83,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: '(( text ))'
+                    placeholder: 'Text'
                     autoparagraph: true
                     linking:
                       anchor: true

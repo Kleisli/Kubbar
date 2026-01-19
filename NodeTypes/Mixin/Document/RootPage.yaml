@@ -1,0 +1,8 @@
+'Kleisli.Kubbar:Document.RootPage':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Site' : true
+    'Kleisli.Kubbar:Document.Page': true
+  ui:
+    icon: file
+    label: 'Root Page'

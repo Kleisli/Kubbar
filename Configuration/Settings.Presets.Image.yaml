@@ -1,0 +1,48 @@
+# ImageEditor
+# https://neos.readthedocs.io/en/stable/References/PropertyEditorReference.html#property-type-image-neos-media-domain-model-imageinterface-imageeditor-image-selection-upload-editor
+#
+# AssetEditor
+# https://neos.readthedocs.io/en/stable/References/PropertyEditorReference.html#property-type-asset-neos-media-domain-model-asset-array-neos-media-domain-model-asset-asseteditor-file-selection-editor
+
+Neos:
+  Neos:
+    nodeTypes:
+      presets:
+        properties:
+          image:
+            single:
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Image'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+            multiple:
+              type: array<Neos\Media\Domain\Model\Asset>
+              ui:
+                label: 'Images'
+                editorOptions:
+                  multiple: true
+                  constraints:
+                    mediaTypes: ['image/jpg', 'image/jpeg', 'image/gif', 'image/png', 'image/webp', 'image/wbmp', 'image/xbm']
+                  features:
+                    upload: true
+                    mediaBrowser: true
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+            singleSquare:
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Square Image'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  editorOptions:
+                    crop:
+                      aspectRatio:
+                        enableOriginal: false
+                        allowCustom: false
+                        locked:
+                          width: 1
+                          height: 1

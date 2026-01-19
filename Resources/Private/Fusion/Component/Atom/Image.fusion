@@ -1,9 +1,9 @@
-prototype(Kleisli.Kubbar:Component.Image) < prototype(Neos.Fusion:Component) {
+prototype(Kleisli.Kubbar:Component.Atom.Image) < prototype(Neos.Fusion:Component) {
 
     asset = null
 
-    package = false
-    path = null
+    resourcePackage = false
+    resourcePath = null
 
     uri = null
 
@@ -23,24 +23,26 @@ prototype(Kleisli.Kubbar:Component.Image) < prototype(Neos.Fusion:Component) {
         imageSource = Neos.Fusion:Case {
             asset {
                 condition = ${props.asset}
-
                 renderer = Sitegeist.Kaleidoscope:AssetImageSource {
                     asset = ${props.asset}
                 }
             }
+
             resource {
-                condition = ${props.path}
+                condition = ${props.resourcePath}
                 renderer = Sitegeist.Kaleidoscope:ResourceImageSource {
-                    path = ${props.path}
-                    package = ${props.package}
+                    path = ${props.resourcePath}
+                    package = ${props.resourcePackage}
                 }
             }
+
             uri {
                 condition = ${props.uri}
                 renderer = Sitegeist.Kaleidoscope:UriImageSource {
                     uri = ${props.uri}
                 }
             }
+
             dummy {
                 condition = true
                 renderer = Sitegeist.Kaleidoscope:DummyImageSource

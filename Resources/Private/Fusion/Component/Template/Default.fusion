@@ -1,0 +1,10 @@
+prototype(Gewerbeverein.Site:Component.Template.Default) < prototype(Neos.Fusion:Component) {
+
+    content = ''
+
+    renderer = Neos.Fusion:Join {
+        header = Kleisli.Kubbar:Component.Organism.Header
+        content = ${props.content}
+        footer = Kleisli.Kubbar:Component.Organism.Footer
+    }
+}

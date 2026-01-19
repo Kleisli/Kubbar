@@ -1,3 +1,0 @@
-prototype(Kleisli.Kubbar:Component.Link) < prototype(Neos.Fusion:Tag) {
-    tagName = 'a'
-}

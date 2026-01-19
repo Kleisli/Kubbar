@@ -1,6 +1,3 @@
-##
-# "Headline" element
-#
 prototype(Kleisli.Kubbar:Content.Heading) < prototype(Neos.Neos:ContentComponent) {
     title = Neos.Neos:Editable {
         property = 'title'
