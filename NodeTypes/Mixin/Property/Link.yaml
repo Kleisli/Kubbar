@@ -1,6 +1,11 @@
 'Kleisli.Kubbar:Mixin.Property.Link':
   abstract: true
+  superTypes:
+    'Kleisli.Kubbar:Mixin.Inspector.Group.Link': true
   properties:
     link:
       options:
         preset: 'link.general'
+      ui:
+        inspector:
+          group: link
