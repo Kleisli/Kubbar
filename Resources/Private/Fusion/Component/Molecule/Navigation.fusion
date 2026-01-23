@@ -1,0 +1,25 @@
+prototype(Kleisli.Kubbar:Component.Molecule.Navigation) < prototype(Neos.Fusion:Component) {
+
+    attributes = Neos.Fusion:DataStructure {
+        class = "bg-[#8C183C] text-white lg:p-4"
+    }
+
+    menuButton = Kleisli.Kubbar:Component.Molecule.Navigation.MenuButton
+
+    menu = Neos.Neos:Menu {
+        startingPoint = ${site}
+        maximumLevels = 2
+        renderer = Kleisli.Kubbar:Component.Molecule.Navigation.MenuItemListRenderer {
+            items = ${private.items}
+        }
+    }
+
+    renderer = afx`
+        <nav x-data="{open: false}" {...props.attributes}>
+            <div class="lg:hidden text-right">
+                {props.menuButton}
+            </div>
+            {props.menu}
+        </nav>
+    `
+}

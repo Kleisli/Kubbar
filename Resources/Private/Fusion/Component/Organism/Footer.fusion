@@ -1,21 +1,23 @@
 prototype(Kleisli.Kubbar:Component.Organism.Footer) < prototype(Neos.Fusion:Component) {
 
-  footerContent = Kleisli.Kubbar:Helper.SingletonContentCollection {
-    nodePath = 'footerContent'
-  }
+    class = ""
+    footerContent = Kleisli.Kubbar:Helper.SingletonContentCollection {
+        nodePath = 'footerContent'
 
-  footerElement = Kleisli.Kubbar:Helper.SingletonProperty {
-    property = 'footerProperty'
-  }
+    }
 
-  footerMenu = Neos.Neos:Menu {
-    startingPoint = ${site.properties.footer}
-    maximumLevels = 1
-  }
+    footerElement = Kleisli.Kubbar:Helper.SingletonProperty {
+        property = 'footerProperty'
+    }
 
-  renderer = afx`
-    <footer>
-      {props.footerContent}
-    </footer>
-  `
+    footerMenu = Neos.Neos:Menu {
+        startingPoint = ${site.properties.footer}
+        maximumLevels = 1
+    }
+
+    renderer = afx`
+        <footer class={props.class}>
+            {props.footerContent}
+        </footer>
+    `
 }

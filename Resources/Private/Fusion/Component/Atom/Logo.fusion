@@ -1,0 +1,16 @@
+prototype(Kleisli.Kubbar:Component.Atom.Logo) < prototype(Neos.Fusion:Component) {
+
+    homeLink = Neos.Neos:NodeUri {
+        node = ${site}
+    }
+
+    renderer = afx`
+        <div class={'m-8'}>
+            <a href={props.homeLink}>
+                <div class="h-16 mb-4">
+                    {site.name}
+                </div>
+            </a>
+        </div>
+    `
+}
