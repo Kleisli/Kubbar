@@ -1,0 +1,15 @@
+'Kleisli.Kubbar:Mixin.Content.3Columns':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: '3 Spalten'
+    icon: 'icon-columns'
+    group: 'structure'
+  childNodes:
+    column1:
+      type: 'Neos.Neos:ContentCollection'
+    column2:
+      type: 'Neos.Neos:ContentCollection'
+    column3:
+      type: 'Neos.Neos:ContentCollection'

@@ -1,0 +1,21 @@
+prototype(Kleisli.Kubbar:Content.3Columns) < prototype(Neos.Neos:ContentComponent) {
+
+    class = "flex gap-8"
+    column1class = "w-1/3"
+    column2class = "w-1/3"
+    column3class = "w-1/3"
+
+    renderer = afx`
+        <div class={props.class}>
+            <div class={props.column1class}>
+                <Neos.Neos:ContentCollection nodePath='column1' />
+            </div>
+            <div class={props.column2class}>
+                <Neos.Neos:ContentCollection nodePath='column2' />
+            </div>
+            <div class={props.column3class}>
+                <Neos.Neos:ContentCollection nodePath='column3' />
+            </div>
+        </div>
+    `
+}

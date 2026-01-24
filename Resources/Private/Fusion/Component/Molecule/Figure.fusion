@@ -1,15 +1,13 @@
 prototype(Kleisli.Kubbar:Component.Molecule.Figure) < prototype(Neos.Fusion:Component) {
 
-    class = false
-    image = Kleisli.Kubbar:Component.Image
-    withCaption = true
-    caption = ''
+    class = ''
+    image = Kleisli.Kubbar:Component.Atom.Image
 
     renderer = afx`
         <figure class={props.class}>
             {props.image}
-            <figcaption @if.showCaption={props.withCaption}>
-                {props.caption}
+            <figcaption @if.showCaption={node.properties.showCaption}>
+                <Neos.Neos:Editable property="caption" />
             </figcaption>
         </figure>
     `

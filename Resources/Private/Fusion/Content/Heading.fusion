@@ -1,11 +1,8 @@
 prototype(Kleisli.Kubbar:Content.Heading) < prototype(Neos.Neos:ContentComponent) {
-    title = Neos.Neos:Editable {
-        property = 'title'
-    }
 
     renderer = afx`
         <div class="component-heading">
-            {props.title}
+            <Neos.Neos:Editable property="title" />
         </div>
     `
 }

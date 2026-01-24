@@ -1,0 +1,11 @@
+prototype(Kleisli.Kubbar:Component.Organism.Main) < prototype(Neos.Fusion:Component) {
+
+    class = ""
+    content = ""
+
+    renderer = afx`
+        <main class={props.class}>
+            {props.content}
+        </main>
+    `
+}

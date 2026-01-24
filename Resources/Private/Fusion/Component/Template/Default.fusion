@@ -4,7 +4,9 @@ prototype(Kleisli.Kubbar:Component.Template.Default) < prototype(Neos.Fusion:Com
 
     renderer = Neos.Fusion:Join {
         header = Kleisli.Kubbar:Component.Organism.Header
-        content = ${props.content}
+        main = Kleisli.Kubbar:Component.Organism.Main {
+            content = ${props.content}
+        }
         footer = Kleisli.Kubbar:Component.Organism.Footer
     }
 }

@@ -1,4 +1,4 @@
-'Kleisli.Kubbar:Content.Text':
+'Kleisli.Kubbar:Mixin.Content.Text':
   abstract: true
   superTypes:
     'Neos.Neos:Content': true
@@ -6,4 +6,5 @@
   ui:
     label: 'Text'
     icon: 'icon-file-text'
-    position: 200
+    group: 'general'
+
