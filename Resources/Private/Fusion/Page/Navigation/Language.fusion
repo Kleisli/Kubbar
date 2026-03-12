@@ -1,0 +1,11 @@
+prototype(Kleisli.Kubbar:Page.Navigation.Language) < prototype(Neos.Neos:DimensionsMenu) {
+
+    dimension = 'language'
+
+    attributes {
+        class = "flex flex-row gap-4"
+    }
+    calculateItemStates = true
+
+
+}
