@@ -1,7 +1,6 @@
 'Kleisli.Kubbar:Mixin.Content.TextWithImage':
   superTypes:
     'Neos.Neos:Content': true
-    superTypes:
     'Kleisli.Kubbar:Mixin.Inspector.Group.General': true
     'Kleisli.Kubbar:Mixin.Content.Text': true
     'Kleisli.Kubbar:Mixin.Content.Image': true

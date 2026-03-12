@@ -5,15 +5,19 @@
 # For all the base data, see Neos.Neos:Page
 ##
 prototype(Kleisli.Kubbar:Component.Webpage.Default) < prototype(Neos.Neos:Page) {
+
     head {
-        headTags = Neos.Fusion:Component {
+        metaTags = Neos.Fusion:Component {
             renderer = afx`
                 <meta http-equiv="x-ua-compatible" content="ie=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             `
         }
     }
-    body = Kleisli.Kubbar:Component.Template.Default {
-        content = ''
+
+    bodyTag {
+        attributes.class = "flex flex-col justify-between min-h-screen"
     }
+
+    body = Kleisli.Kubbar:Component.Template.Default
 }

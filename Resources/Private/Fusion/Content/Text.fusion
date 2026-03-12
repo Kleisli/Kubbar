@@ -1,8 +1,0 @@
-prototype(Kleisli.Kubbar:Content.Text) < prototype(Neos.Neos:ContentComponent) {
-
-    renderer = afx`
-        <div class="prose">
-            <Neos.Neos:Editable property="text" />
-        </div>
-    `
-}

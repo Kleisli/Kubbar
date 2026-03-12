@@ -4,18 +4,18 @@ prototype(Kleisli.Kubbar:Component.Molecule.Navigation.MenuItemListRenderer) < p
         class = "flex flex-col justify-center gap-2 text-xl mx-auto lg:flex lg:flex-row lg:text-center"
     }
     liClass = "text-xl mr-2 align-middle"
-    items = null
+    items = ${private.items}
 
     renderer = afx`
-        <ul {...props.attributes} x-bind:class="{'hidden': !open}">
+        <menu {...props.attributes} x-bind:class="{'hidden': !open}">
             <Neos.Fusion:Loop items={props.items} itemName="item">
-                <li class={item.state + ' ' + props.liClass}>
+                <li class={item.state.value + ' ' + props.liClass}>
                     <Neos.Fusion:Tag tagName={item.uri ? 'a' : 'span'} attributes.href={item.uri} attributes.title={item.label}>
                         {item.label}
                     </Neos.Fusion:Tag>
                     <Neos.Neos:MenuItemListRenderer @if={item.children} items={item.children} />
                 </li>
             </Neos.Fusion:Loop>
-        </ul>
+        </menu>
     `
 }

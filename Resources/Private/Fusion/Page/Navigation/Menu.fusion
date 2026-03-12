@@ -9,14 +9,12 @@ prototype(Kleisli.Kubbar:Component.Molecule.Navigation) < prototype(Neos.Fusion:
     menu = Neos.Neos:Menu {
         startingPoint = ${site}
         maximumLevels = 2
-        renderer = Kleisli.Kubbar:Component.Molecule.Navigation.MenuItemListRenderer {
-            items = ${private.items}
-        }
+        renderer = Kleisli.Kubbar:Component.Molecule.Navigation.MenuItemListRenderer
     }
 
     renderer = afx`
         <nav x-data="{open: false}" {...props.attributes}>
-            <div class="lg:hidden text-right">
+            <div class="lg:hidden flex justify-end">
                 {props.menuButton}
             </div>
             {props.menu}

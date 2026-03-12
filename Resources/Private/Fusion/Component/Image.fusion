@@ -2,7 +2,7 @@ prototype(Kleisli.Kubbar:Component.Atom.Image) < prototype(Neos.Fusion:Component
 
     asset = null
 
-    resourcePackage = false
+    resourcePackage = null
     resourcePath = null
 
     uri = null
