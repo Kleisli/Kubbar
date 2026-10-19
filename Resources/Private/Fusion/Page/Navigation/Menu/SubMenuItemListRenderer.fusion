@@ -1,0 +1,20 @@
+prototype(Kleisli.Kubbar:Page.Navigation.Menu.SubMenuItemListRenderer) < prototype(Neos.Fusion:Component) {
+
+    class = "flex-col justify-center gap-2 border-1 p-2 bg-white"
+    liClass = "text-xl mr-2 align-middle"
+    items = ${private.items}
+    level = 0
+
+    renderer = afx`
+        <menu class={'group-hover:flex hidden lg:hidden lg:absolute w-max ' + props.class } x-bind:class="{'hidden': !open}">
+            <Neos.Fusion:Loop items={props.items} itemName="item">
+                <li class={props.liClass + ' ' + item.state.value}>
+                    <Neos.Fusion:Tag tagName={item.uri ? 'a' : 'span'} attributes.href={item.uri} attributes.title={item.label}>
+                        {item.label}
+                    </Neos.Fusion:Tag>
+                    <Kleisli.Kubbar:Page.Navigation.Menu.SubMenuItemListRenderer @if={item.children} items={item.children} level={props.level + 1} />
+                </li>
+            </Neos.Fusion:Loop>
+        </menu>
+    `
+}

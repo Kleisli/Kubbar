@@ -1,12 +1,30 @@
-prototype(Kleisli.Kubbar:Component.Template.Default) < prototype(Neos.Fusion:Component) {
+prototype(Kleisli.Kubbar:Page.Template) < prototype(Neos.Fusion:Component) {
 
     content = ''
 
-    renderer = Neos.Fusion:Join {
-        header = Kleisli.Kubbar:Component.Organism.Header
-        main = Kleisli.Kubbar:Component.Organism.Main {
-            content = ${props.content}
-        }
-        footer = Kleisli.Kubbar:Component.Organism.Footer
-    }
+    /*footerContent = Kleisli.Kubbar:Helper.SingletonContentCollection {
+        nodePath = 'footerContent'
+    }*/
+
+    /*footerElement = Kleisli.Kubbar:Helper.SingletonProperty {
+        property = 'footerProperty'
+    }*/
+
+    /*footerMenu = Neos.Neos:Menu {
+        startingPoint = ${q(site).referenceNodes('footerNavigationRoot').get(0)}
+        maximumLevels = 1
+    }*/
+
+    renderer = afx`
+        <header class="border-1 m-4 p-4">
+            <Kleisli.Kubbar:Page.Section.Header.Logo />
+            <Kleisli.Kubbar:Page.Navigation.Menu />
+        </header>
+        <main class="grow border-1 m-4 p-4">
+            {props.content}
+        </main>
+        <footer class="border-1 m-4 p-4">
+
+        </footer>
+    `
 }

@@ -4,5 +4,5 @@
     'Neos.Neos:Site' : true
     'Kleisli.Kubbar:Document.Page': true
   ui:
-    icon: file
+    icon: globe
     label: 'Root Page'
