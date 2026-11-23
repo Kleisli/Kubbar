@@ -1,4 +1,4 @@
-prototype(Kleisli.Kubbar:Component.Atom.Image) < prototype(Neos.Fusion:Component) {
+prototype(Kleisli.Kubbar:Component.Image) < prototype(Neos.Fusion:Component) {
 
     asset = null
 

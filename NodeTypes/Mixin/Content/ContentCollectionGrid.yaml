@@ -1,0 +1,12 @@
+'Kleisli.Kubbar:Mixin.Content.ContentCollectionGrid':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection' : true
+  ui:
+    icon: 'th'
+    group: 'structure'
+  constraints:
+    nodeTypes:
+      'Neos.Neos:Content': false
+      # 'My.Site:GridContent': true

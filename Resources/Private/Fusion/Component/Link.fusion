@@ -1,0 +1,15 @@
+prototype(Kleisli.Kubbar:Component.Link) < prototype(Neos.Fusion:Component) {
+
+    link = null
+    class = ''
+    content = ''
+
+    renderer = Neos.Fusion:Tag {
+        tagName = ${props.link ? 'a' : 'span'}
+        attributes.href = ${props.link || false}
+        attributes.class = ${props.class}
+        content = ${props.content}
+    }
+
+    @process.convertUris = Neos.Neos:ConvertUris
+}

@@ -1,0 +1,13 @@
+'Kleisli.Kubbar:Mixin.Property.ImageCaption':
+  abstract: true
+  superTypes:
+    'Kleisli.Kubbar:Mixin.Inspector.Group.Image': true
+  properties:
+    caption:
+      type: string
+      defaultValue: ''
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            autoparagraph: true

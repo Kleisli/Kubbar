@@ -3,6 +3,7 @@
   superTypes:
     'Neos.Neos:Content': true
     'Kleisli.Kubbar:Mixin.Property.Image': true
+    'Kleisli.Kubbar:Mixin.Property.ImageCaption': true
   ui:
     label: 'Image'
     icon: 'icon-picture'

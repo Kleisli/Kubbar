@@ -8,4 +8,4 @@
         preset: 'link.general'
       ui:
         inspector:
-          group: link
+          group: 'link'
